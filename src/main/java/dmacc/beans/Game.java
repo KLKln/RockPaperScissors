@@ -34,6 +34,7 @@ public class Game {
 			computerPlayer = "scissors";
 		}
 		
+		
 	}
 	
 	private void determineWinner() {
@@ -47,8 +48,7 @@ public class Game {
 			}
 			else if(computerPlayer.equals("scissors")) {
 				winner = player1;
-			}
-						
+			}						
 		}
 		
 		else if(player1.equals("paper")) {
@@ -57,9 +57,7 @@ public class Game {
 			}
 			else if(computerPlayer.equals("rock")) {
 				winner = player1;
-			}
-			
-			
+			}			
 		}
 		
 		else if(player1.equals("scissors")) {
@@ -74,13 +72,6 @@ public class Game {
 		}
 		
 	}
-
-
-	public Game() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
 
 	public String getPlayer1() {
 		return player1;
