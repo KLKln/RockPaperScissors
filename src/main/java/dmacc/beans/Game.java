@@ -15,11 +15,11 @@ public class Game {
 	public Game(String player1) {
 		super();
 		this.player1 = player1;
-		this.setComputerPlayerToRandom();
+		this.setComputerPlayer();
 		this.determineWinner();
 	}	
 	
-	private void setComputerPlayerToRandom() {
+	private void setComputerPlayer() {
 		// TODO Auto-generated method stub
 		Random rand = new Random();
 		int randomChoice = rand.nextInt(3);
@@ -37,39 +37,41 @@ public class Game {
 		
 	}
 	
-	private void determineWinner() {
+	private String determineWinner() {
 		// TODO Auto-generated method stub
+		String winner = "";
 		if (player1.equals(computerPlayer)) {
-			winner = "tie";
+			this.setWinner("tie");
 		}
 		else if(player1.equals("rock")) {
 			if (computerPlayer.equals("paper")) {
-				winner = computerPlayer;
+				this.setWinner(computerPlayer);
 			}
 			else if(computerPlayer.equals("scissors")) {
-				winner = player1;
+				this.setWinner(player1);
 			}						
 		}
 		
 		else if(player1.equals("paper")) {
 			if (computerPlayer.equals("scissors")) {
-				winner = computerPlayer;
+				this.setWinner(computerPlayer);
 			}
 			else if(computerPlayer.equals("rock")) {
-				winner = player1;
+				this.setWinner(player1);
 			}			
 		}
 		
 		else if(player1.equals("scissors")) {
 			if (computerPlayer.equals("rock")) {
-				winner = computerPlayer;
+				this.setWinner(computerPlayer);
 			}
 			else if(computerPlayer.equals("paper")) {
-				winner = player1;
+				this.setWinner(player1);
 			}
 			
 			
 		}
+		return winner;
 		
 	}
 

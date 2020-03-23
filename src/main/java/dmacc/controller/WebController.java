@@ -11,11 +11,12 @@ import dmacc.beans.Game;
 public class WebController {
 	@GetMapping("/playagame")
 	public String playGame(@RequestParam(name="choice", required=false) String theChoice, Model model) {
-	if(theChoice == null) {
-	return "index";
+		if(theChoice == null) {
+			return "index";
 	}
 	Game theOutcome = new Game(theChoice);
 	model.addAttribute("game", theOutcome);
+	
 	return "results";
 	}
 
