@@ -33,13 +33,14 @@ public class Game {
 		else if(randomChoice == 2) {
 			computerPlayer = "scissors";
 		}
-		
+		this.setComputerPlayer();
+		return;
 		
 	}
 	
-	private String determineWinner() {
+	private void determineWinner() {
 		// TODO Auto-generated method stub
-		String winner = "";
+		String winner = "winner";
 		if (player1.equals(computerPlayer)) {
 			this.setWinner("tie");
 		}
@@ -49,7 +50,8 @@ public class Game {
 			}
 			else if(computerPlayer.equals("scissors")) {
 				this.setWinner(player1);
-			}						
+			}
+			
 		}
 		
 		else if(player1.equals("paper")) {
@@ -71,44 +73,26 @@ public class Game {
 			
 			
 		}
-		return winner;
-		
+
+		return;			
 	}
-
-	public String getPlayer1() {
-		return player1;
-	}
-
-
-	public void setPlayer1(String player1) {
-		this.player1 = player1;
-	}
-
-
-	public String getComputerPlayer() {
-		return computerPlayer;
-	}
-
-
-	public void setComputerPlayer(String computerPlayer) {
-		this.computerPlayer = computerPlayer;
-	}
-
 
 	public String getWinner() {
 		return winner;
 	}
 
-
 	public void setWinner(String winner) {
 		this.winner = winner;
 	}
 
+	
+	
+	
 
-	@Override
-	public String toString() {
-		return "Game [player1=" + player1 + ", computerPlayer=" + computerPlayer + ", winner=" + winner + "]";
-	}
+	
+
+	
+
 	
 	
 	
