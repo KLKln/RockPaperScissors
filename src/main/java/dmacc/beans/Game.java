@@ -33,7 +33,7 @@ public class Game {
 		else if(randomChoice == 2) {
 			computerPlayer = "scissors";
 		}
-		this.setComputerPlayer();
+		//this.setComputerPlayer();
 		return;
 		
 	}
