@@ -40,7 +40,7 @@ public class Game {
 	
 	private void determineWinner() {
 		// TODO Auto-generated method stub
-		String winner = "winner";
+		//String winner = "winner";
 		if (player1.equals(computerPlayer)) {
 			this.setWinner("tie");
 		}
