@@ -22,7 +22,7 @@ public class Game {
 	private void setComputerPlayer() {
 		// TODO Auto-generated method stub
 		Random rand = new Random();
-		int randomChoice = rand.nextInt(3);
+		int randomChoice = rand.nextInt(5);
 		
 		if(randomChoice == 0) {
 			computerPlayer = "rock";
@@ -33,7 +33,13 @@ public class Game {
 		else if(randomChoice == 2) {
 			computerPlayer = "scissors";
 		}
-		//this.setComputerPlayer();
+		else if(randomChoice == 3) {
+			computerPlayer = "lizard";
+		}
+		else if(randomChoice == 4) {
+			computerPlayer = "spock";
+		}
+		
 		return;
 		
 	}
@@ -42,7 +48,7 @@ public class Game {
 		// TODO Auto-generated method stub
 		//String winner = "winner";
 		if (player1.equals(computerPlayer)) {
-			this.setWinner("tie");
+			this.setWinner("no one, it's a tie");
 		}
 		else if(player1.equals("rock")) {
 			if (computerPlayer.equals("paper")) {
@@ -50,6 +56,12 @@ public class Game {
 			}
 			else if(computerPlayer.equals("scissors")) {
 				this.setWinner(player1);
+			}
+			else if(computerPlayer.equals("lizard")) {
+				this.setWinner(player1);
+			}
+			else if(computerPlayer.equals("spock")) {
+				this.setWinner(computerPlayer);
 			}
 			
 		}
@@ -60,7 +72,13 @@ public class Game {
 			}
 			else if(computerPlayer.equals("rock")) {
 				this.setWinner(player1);
-			}			
+			}
+			else if(computerPlayer.equals("lizard")) {
+				this.setWinner(computerPlayer);
+			}
+			else if(computerPlayer.equals("spock")) {
+				this.setWinner(player1);
+			}
 		}
 		
 		else if(player1.equals("scissors")) {
@@ -70,11 +88,54 @@ public class Game {
 			else if(computerPlayer.equals("paper")) {
 				this.setWinner(player1);
 			}
+			else if(computerPlayer.equals("lizard")) {
+				this.setWinner(player1);
+			}
+			else if(computerPlayer.equals("spock")) {
+				this.setWinner(computerPlayer);
+			}
 			
 			
 		}
+		else if(player1.equals("lizard")) {
+			if (computerPlayer.equals("rock")) {
+				this.setWinner(computerPlayer);
+			}
+			else if(computerPlayer.equals("paper")) {
+				this.setWinner(player1);
+			}
+			else if(computerPlayer.equals("scissors")) {
+				this.setWinner(computerPlayer);
+			}
+			else if(computerPlayer.equals("spock")) {
+				this.setWinner(player1);
+			}
+			
+		}
+		else if(player1.contentEquals("spock")){
+			if (computerPlayer.equals("rock")) {
+				this.setWinner(player1);
+			}
+			else if(computerPlayer.equals("paper")) {
+				this.setWinner(computerPlayer);
+			}
+			else if(computerPlayer.equals("scissors")) {
+				this.setWinner(player1);
+			}
+			else if(computerPlayer.equals("lizard")) {
+				this.setWinner(computerPlayer);
+			}
+		}
 
 		return;			
+	}
+
+	public String getComputerPlayer() {
+		return computerPlayer;
+	}
+
+	public void setComputerPlayer(String computerPlayer) {
+		this.computerPlayer = computerPlayer;
 	}
 
 	public String getWinner() {
@@ -83,6 +144,14 @@ public class Game {
 
 	public void setWinner(String winner) {
 		this.winner = winner;
+	}
+
+	public String getPlayer1() {
+		return player1;
+	}
+
+	public void setPlayer1(String player1) {
+		this.player1 = player1;
 	}
 
 	
