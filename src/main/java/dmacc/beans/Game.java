@@ -130,29 +130,7 @@ public class Game {
 		return;			
 	}
 
-	public String getComputerPlayer() {
-		return computerPlayer;
-	}
-
-	public void setComputerPlayer(String computerPlayer) {
-		this.computerPlayer = computerPlayer;
-	}
-
-	public String getWinner() {
-		return winner;
-	}
-
-	public void setWinner(String winner) {
-		this.winner = winner;
-	}
-
-	public String getPlayer1() {
-		return player1;
-	}
-
-	public void setPlayer1(String player1) {
-		this.player1 = player1;
-	}
+	
 
 	
 	
